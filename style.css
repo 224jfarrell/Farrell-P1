@@ -3,3 +3,19 @@
     max-width: 1920px;
     overflow-x: hidden;
 }
+
+@font-face {
+    font-family: monofur;
+    src: url(monof55.ttf);
+}
+
+body{
+    background-image: url(img/bg.png);
+}
+
+#header{
+    color: white;
+    height: 5rem;
+    padding-top: 20px;
+    position: sticky;
+}
