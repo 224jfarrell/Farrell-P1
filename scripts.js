@@ -189,5 +189,9 @@ function load(){
     }
 }
 
-setInterval(fontOrder, 100);
-setInterval(load, 20);
+function skip(){
+    j = 1000;
+}
+
+setInterval(fontOrder, 150);
+setInterval(load, 13);

@@ -22,7 +22,7 @@ body{
 
 .hidden {
     visibility: hidden;
-    width: 100%;
+    width: 1890px;
 }
 
 @keyframes fadeOut {
@@ -68,4 +68,29 @@ body{
         opacity: 1;
         visibility: visible;
     }
+}
+
+#tooltips{
+    height: 30px;
+}
+
+.row-c {
+    width: 227px;
+}
+
+.seychelles {
+    width: 100px;
+    height: 100px;
+}
+
+.text-header {
+    font-family: "Josefin Slab", serif;
+}
+
+.text {
+    font-family: "Edu TAS Beginner", sans-serif;
+}
+
+.text-navbar {
+    font-family: "Monofur", monospace;
 }
