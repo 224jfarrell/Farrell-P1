@@ -1,5 +1,6 @@
 const fonts = ['Agbalumo', 'Bebas Neue', 'Edu TAS Beginner', 'Graduate', 'IBM Plex Sans', 'Josefin Slab', 'Linefont', 'Monofur', 'Montserrat', 'Nabla', 'Noto Sans Japanese', 'Noto Sans Korean', 'Noto Serif Simplified Chinese', 'Nunito Sans', 'Open Sans', 'Roboto Mono'];
 let fontResult;
+let int;
 let i = 0;
 let j = 0;
 let k = 0;
@@ -7,6 +8,10 @@ let A = document.getElementById('header');
 let B = document.getElementById('prog');
 let C = document.getElementById('tooltips');
 let D = document.getElementById('percent');
+let E = document.getElementById('to-hide');
+let F = document.getElementById('change');
+let G = document.getElementById('unhide');
+let H = document.getElementById('unhide-s');
 
 function fontOrder(font){
     if(i < fonts.length){
@@ -72,18 +77,16 @@ function fontOrder(font){
             A.innerText = "----Портфоліо студента Джозефа Фаррелла (3 курс)----"
             break;
         default:
-            console.log('nothing');
             break;
     }
 }
-setInterval(fontOrder, 100);
 
 function fontLoad(font){
-    if(k < fonts.length){
+    if(k <= fonts.length){
         k++;
         font = fonts[k - 1];
     }
-    if(k == fonts.length){
+    if(k == fonts.length + 1){
         font = "Segoe UI";
     }
     switch(font){
@@ -143,8 +146,9 @@ function fontLoad(font){
         case 'Segoe UI':
             C.style.fontFamily = "'Segoe UI', sans-serif";
             C.innerText = 'Fonts loaded!';
+            k = 210;
+            clearInterval(int);
         default:
-            console.log('nothing');
             break;
     }
 }
@@ -157,10 +161,33 @@ function load(){
     }
     if(j == 100){
         C.innerText = "Loading fonts..."
-        setInterval(fontLoad, 350)
+        int = setInterval(fontLoad, 350);
+    }
+    if(j == 750){
+        C.innerText = "Almost Done!"
     }
     if(j == 1000){
-        k = 210;
+        E.style.animationName = 'fadeOut';
+        E.style.animationDuration = "1.5s";
+        E.style.animationFillMode = "forwards";
+        E.style.animationTimingFunction = "ease-in-out";
+        F.style.animationName = 'bg';
+        F.style.animationDuration = '1.5s'
+        F.style.animationDelay = '1s';
+        F.style.animationFillMode = 'forwards';
+        F.style.animationTimingFunction = 'ease-in-out';
+        G.style.animationName = 'fadeIn';
+        G.style.animationDelay = "1s";
+        G.style.animationDuration = "1.5s";
+        G.style.animationFillMode = "forwards";
+        G.style.animationTimingFunction = 'ease-in-out';
+        H.style.animationName = 'fadeIn-s';
+        H.style.animationDelay = "1s";
+        H.style.animationDuration = "1.5s";
+        H.style.animationFillMode = "forwards";
+        H.style.animationTimingFunction = 'ease-in-out';
     }
 }
+
+setInterval(fontOrder, 100);
 setInterval(load, 20);

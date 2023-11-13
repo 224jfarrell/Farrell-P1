@@ -21,5 +21,51 @@ body{
 }
 
 .hidden {
-    display:none !important;
+    visibility: hidden;
+    width: 100%;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        display: visible;
+    } 100% {
+        opacity: 0;
+        display: none;
+    }
+} 
+
+@keyframes bg {
+    0% {
+        background-image: url(img/bg2.png);
+    } 100% {
+        background-image: url(img/bg.png);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    } 100% { 
+        opacity: 1;
+        visibility: visible;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x));
+    }
+}
+
+@keyframes fadeIn-s {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    } 100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
