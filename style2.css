@@ -11,6 +11,7 @@
 
 body{
     background-image: url(img/bg.png);
+    background-attachment: fixed;
 }
 
 .seychelles {
@@ -22,7 +23,7 @@ body{
     font-family: "Josefin Slab", serif;
 }
 
-.text {
+.text-content {
     font-family: "Edu TAS Beginner", sans-serif;
 }
 
@@ -35,4 +36,12 @@ body{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 25px;
+    background-color: #00000070;
+    padding: 20px;
+}
+
+.project {
+    width: 449px;
+    float: right;
 }

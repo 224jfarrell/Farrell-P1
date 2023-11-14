@@ -11,11 +11,12 @@
 
 body{
     background-image: url(img/bg2.png);
+    background-attachment: fixed;
 }
 
 #header{
     color: white;
-    height: 5rem;
+    height: 5.03125rem;
     padding-top: 20px;
     position: sticky;
 }
