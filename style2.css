@@ -12,6 +12,7 @@
 body{
     background-image: url(img/bg.png);
     background-attachment: fixed;
+    width: 100%;
 }
 
 .seychelles {
@@ -44,4 +45,23 @@ body{
 .project {
     width: 449px;
     float: right;
+    box-shadow: -5px -5px white;
+    transition: box-shadow 0.5s;
+    border-radius: 15px;
+}
+
+.project:hover{
+    box-shadow: -10px -10px darkgray;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.full {
+    width: 80%;
+}
+
+.me {
+    width: 100%;
 }

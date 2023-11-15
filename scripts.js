@@ -161,9 +161,9 @@ function load(){
     }
     if(j == 100){
         C.innerText = "Loading fonts..."
-        int = setInterval(fontLoad, 350);
+        int = setInterval(fontLoad, 275);
     }
-    if(j == 750){
+    if(j == 900){
         C.innerText = "Almost Done!"
     }
     if(j == 1000){
@@ -194,4 +194,4 @@ function skip(){
 }
 
 setInterval(fontOrder, 150);
-setInterval(load, 13);
+setInterval(load, 7);

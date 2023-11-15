@@ -12,6 +12,7 @@
 body{
     background-image: url(img/bg2.png);
     background-attachment: fixed;
+    width: 100%;
 }
 
 #header{
@@ -23,7 +24,7 @@ body{
 
 .hidden {
     visibility: hidden;
-    width: 1890px;
+    width: 100%;
 }
 
 @keyframes fadeOut {
@@ -94,4 +95,8 @@ body{
 
 .text-navbar {
     font-family: "Monofur", monospace;
+}
+
+nav {
+    padding-right: 100px;
 }
